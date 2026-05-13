@@ -228,7 +228,7 @@ main {
     transition: transform 0.3s ease;
 }
 
-.card:hover{
+.card:hover {
     cursor: pointer;
     transform: scale(1.03);
     transition: transform 0.3s ease;
@@ -241,7 +241,7 @@ main {
 
 .sneaker-purple {
     grid-area: sneaker-purple;
-    background-image: url(../images/products/moderno.jpg);
+    background-image: url(../images/products/roxo-verde-grid.jpg);
 }
 
 .model {
@@ -275,20 +275,218 @@ main {
     text-align: center;
 }
 
-.card-title{
-    font-family: 1.25rem;
+.card-title {
+    font-size: 1.25rem;
     font-weight: 400;
     color: #d6d6d6;
     margin-bottom: 10px;
 }
-.card-subtitle{
+
+.card-subtitle {
     font-family: 1.5rem;
     font-weight: 400;
     color: #d6d6d6;
     margin-bottom: 20px;
 }
 
-.cta-group{
+.cta-group {
     display: flex;
     gap: 10px;
+}
+
+/*footer*/
+.site-footer {
+    margin-top: 25px;
+    background-color: #333333;
+    color: white;
+    padding: 40px;
+}
+
+.footer-content {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    gap: 155px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 3.125rem;
+    flex-direction: column;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-column {
+    padding: 0;
+    margin-top: 12px;
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li a {
+    color: #d6d6d6;
+    padding: 2px;
+}
+
+.footer-nav li a:hover {
+    color: #d6d6d6;
+    padding: 2px;
+    text-decoration: underline;
+}
+
+.footer-nav strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #fcfaff;
+    font-size: 1.25rem;
+    padding: 0;
+    font-weight: 400;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+}
+
+
+.newsletter-form input {
+    border-radius: 30px;
+    color: #313131aa;
+    padding: 12px;
+    width: 344px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.footer-social ul li a:hover {
+    opacity: 0.7;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    color: #d6d6d6;
+    border-top: 1px solid #555;
+}
+
+/*Menu responsivo*/
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.menu-icon:hover img {
+    opacity: 0.7;
+}
+
+@media (max-width: 1280px) {
+    .header {
+        width: calc(100% - 40px);
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        width: 200px;
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 20px;
+        background-color: #fff;
+        gap: 2rem;
+
+        right: -100%;
+        transition: right 0.3s ease;
+
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-center,
+    .nav-right {
+        /* width: 100%; */
+        text-align: center;
+    }
+
+    .nav-center li,
+    .nav-right li {
+        text-align: center;
+    }
+
+    .nav-center ul,
+    .nav-right ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        align-items: center;
+
+        padding-left: 0;
+        /*Depois de muito bater cabeca foi isso que faltava para ficar perfeitamente alinhado ao centro*/
+        margin: 0;
+        list-style: none;
+
+    }
+
+    /* .nav-center ul li,
+    .nav-right ul li {
+        width: 100%;
+    } */
+
+    .nav-center a,
+    .nav-right a {
+        display: inline-block;
+        border-bottom: 1px solid #eeeeee;
+        padding: 0.3rem 0;
+        font-size: 1rem;
+    }
+
+    .menu-toggle:checked~.nav-container {
+        right: 0;
+    }
 }

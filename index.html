@@ -22,24 +22,33 @@
                     title="SystaxWear-Tenis e snekers online"></a>
         </h1>
 
-        <nav class="nav-center" aria-label="Categorias Principais">
-            <ul>
-                <li><a href="#">Masculino</a></li>
-                <li><a href="#">Feminino</a></li>
-                <li><a href="#">Outlet</a></li>
-            </ul>
-        </nav>
+        <input type="checkbox" name="" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <img src="./images/icons/hamburguer.svg" alt="">
+        </label>
 
-        <nav class="nav-right" aria-label="Acesso rapido">
-            <ul>
-                <li><a href="#">Nossas lojas</a></li>
-                <li><a href="#">
-                <li>Sobre</a></li>
-                <li><a href="#"><img src="images/icons/user.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/icons/help.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/icons/bag.svg" alt=""></a></li>
-            </ul>
+        <nav class="nav-container">
 
+
+            <nav class="nav-center" aria-label="Categorias Principais">
+                <ul>
+                    <li><a href="#">Masculino</a></li>
+                    <li><a href="#">Feminino</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </nav>
+
+
+            <nav class="nav-right" aria-label="Acesso rapido">
+                <ul>
+                    <li><a href="#">Nossas lojas</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#"><img src="images/icons/user.svg" alt=""></a></li>
+                    <li><a href="#"><img src="images/icons/help.svg" alt=""></a></li>
+                    <li><a href="#"><img src="images/icons/bag.svg" alt=""></a></li>
+                </ul>
+
+            </nav>
         </nav>
 
 
@@ -53,14 +62,14 @@
                     <span class="hero-subtitle">Kripto One</span>
                     <h2 class="hero-title">Transforme qualquer passo em presença</h2>
                     <div class="hero-buttons">
-                        <a class="btn btn-outline" href="#">Ver modelos</a>
+                        <a class="btn btn-outline" href="#footer">Ver modelos</a>
                         <a class="btn btn-filled" href="#">comprar</a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Seção de categorias dos tenis -->
-        <section id="categorias-tenis" class="category-section">
+        <section id="categorias-tenis" class="category-section" id="categorias-tenis">
 
             <div class="category-card casual">
                 <a href="#" class="category-link">
@@ -88,13 +97,13 @@
             </div>
         </section>
         <!-- Seção de produtos -->
-        <section class="grid-section">
+        <section class="grid-section" id="grid">
             <div class="card highlight bg-top1">
                 <div class="top1-content">
                     <h3 class="card-title">Kripton one</h3>
                     <p class="card-subtitle">Explore além do que o olho vê</p>
                     <div class="cta-group">
-                        <a href="#" class="btn btn-outline">Feminino</a>    
+                        <a href="#" class="btn btn-outline">Feminino</a>
                         <a href="#" class="btn btn-outline">Masculino</a>
                     </div>
                 </div>
@@ -106,20 +115,82 @@
             <div class="card sneaker-silver"></div>
         </section>
     </main>
-    <!-- <footer class="site-footer">
-        <div class="contact-info">
-            <h3>Contato</h3>
-            <p>Email: contato@sintaxwear.com</p>
-            <p>Telefone: (11) 1234-5678</p>
+    <footer class="site-footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-right">
+                <form class="newsletter-form">
+                    <label for="newsletter-email">Inscreva-se em nosso e-mail</label>
+                    <input type="email" id="newsletter-email" placeholder="email@email.com" />
+                </form>
+                <div class="footer-social">
+                    <span>Redes sociais</span>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank"><img src="./images/icons/instagram.svg"
+                                    alt="Instagram" /></a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/5511999999999" target="_blank"><img src="./images/icons/whatsapp.svg"
+                                    alt="WhatsApp" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/" target="_blank"><img src="./images/icons/tiktok.svg"
+                                    alt="TikTok" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><img src="./images/icons/facebook.svg"
+                                    alt="Facebook" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <strong>Masculino</strong>
+                    <ul>
+                        <li><a href="#grid">Casual</a></li>
+                        <li><a href="#categorias-tenis">Esporte</a></li>
+                        <li><a href="#grid">Moderno</a></li>
+                        <li><a href="#grid">Futurista</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <strong>Feminino</strong>
+                    <ul>
+                        <li><a href="#grid">Casual</a></li>
+                        <li><a href="#grid">Esporte</a></li>
+                        <li><a href="#grid">Moderno</a></li>
+                        <li><a href="#grid">Futurista</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <strong>Outlet</strong>
+                    <ul>
+                        <li><a href="#grid">Masculino</a></li>
+                        <li><a href="#grid">Feminino</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <strong>Nossas lojas</strong>
+                    <ul>
+                        <li><a href="#grid">Loja física</a></li>
+                        <li><a href="#grid">Loja online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <strong>Sobre</strong>
+                    <ul>
+                        <li><a href="#grid">Quem somos</a></li>
+                        <li><a href="#grid">Missão</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <div class="footer-links">
-            <h3>Links</h3>
-            <ul>
-                <li><a href="#">Política de Privacidade</a></li>
-                <li><a href="#">Termos de Uso</a></li>
-            </ul>
-        </div>
-    </footer> -->
+
+
+        <div class="footer-copy">Copyright. All Rights Reserved</div>
+    </footer>
+    </footer>
 </body>
 
 </html>
