@@ -28,6 +28,15 @@ main {
     padding: 0.125rem 1.25rem;
 }
 
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex: 1;
+    margin-left: 10rem;
+}
+
 .logo img {
     height: 48px;
 }
@@ -395,7 +404,7 @@ main {
 
 .nav-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: auto;
     align-items: center;
     gap: 2rem;
@@ -424,7 +433,7 @@ main {
 }
 
 /*Responsividade*/
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .header {
         position: fixed;
         top: 50px;
