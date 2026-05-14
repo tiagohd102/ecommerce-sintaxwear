@@ -1,7 +1,9 @@
-body {
+body,
+html {
     font-family: var(--font-principal);
     background-color: #dadada;
     color: #333333;
+    overflow-x: hidden;
 }
 
 main {
@@ -283,7 +285,7 @@ main {
 }
 
 .card-subtitle {
-    font-family: 1.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #d6d6d6;
     margin-bottom: 20px;
@@ -394,8 +396,9 @@ main {
 .nav-container {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: auto;
     align-items: center;
+    gap: 2rem;
 }
 
 .menu-toggle {
@@ -420,9 +423,20 @@ main {
     opacity: 0.7;
 }
 
-@media (max-width: 1280px) {
+/*Responsividade*/
+@media (max-width: 768px) {
     .header {
-        width: calc(100% - 40px);
+        position: fixed;
+        top: 50px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        transform: none;
+        padding: 0.5rem 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
     }
 
     .menu-icon {
@@ -431,16 +445,18 @@ main {
 
     .nav-container {
         position: fixed;
-        top: 0;
-        width: 200px;
+        top: 85px;
+        width: min(70vw, 180px);
+        height: calc(100vh - 140px);
         flex-direction: column;
         padding-top: 80px;
         padding-bottom: 20px;
         background-color: #fff;
         gap: 2rem;
 
-        right: -100%;
-        transition: right 0.3s ease;
+        right: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
 
         align-items: center;
         display: flex;
@@ -451,11 +467,13 @@ main {
     .nav-right {
         /* width: 100%; */
         text-align: center;
+
     }
 
     .nav-center li,
     .nav-right li {
         text-align: center;
+
     }
 
     .nav-center ul,
@@ -487,6 +505,93 @@ main {
     }
 
     .menu-toggle:checked~.nav-container {
-        right: 0;
+        transform: translateX(0);
     }
+
+    main {
+        padding: 0.625rem;
+    }
+
+    .hero-section {
+        height: 660px;
+        background-image: url(../images/banner/hero-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-section .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-section .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-content {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    .hero-overlay {
+        justify-content: center;
+        padding: 0 1.5rem;
+    }
+
+    .category-card {
+        width: 100%;
+    }
+
+    .grid-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "highlight highlight"
+            "sneaker-white sneaker-white"
+            "model sneaker-color"
+            "model sneaker-silver";
+        max-width: 100%;
+        gap: 0.625rem;
+    }
+
+    .highlight {
+        min-height: 500px;
+    }
+
+    .model {
+        min-height: 370px;
+    }
+
+    .sneaker-white,
+    .sneaker-purple {
+        min-height: 190px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-social ul {
+        gap: 1rem;
+    }
+
+    .footer-copy{
+        font-size: 1rem;
+        padding: 1.5rem 0 1.5rem;
+    }
+
+
 }
